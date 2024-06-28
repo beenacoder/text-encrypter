@@ -1,0 +1,26 @@
+body {
+    background-color: #e7eaf5;
+    width: 100vw;
+}
+
+header {
+    padding: 40px;
+}
+
+main {
+    margin: auto;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+}
+
+
+.encrypt-section {
+    flex: 2;
+    background-color: #495faf;
+}
+
+.decrypt-section {
+    flex: 1;
+    background-color: #96a8e9;
+}
