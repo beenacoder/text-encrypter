@@ -6,24 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <a href="">Logo</a>
+        <img src="./assets/logo.png" alt="logo">
+        <nav>
+            <a href="">Quienes Somos</a>
+            <a href="">Contacto</a>
+            <a href="">FAQ</a>
+        </nav>
     </header>
     <main>
         <section class="encrypt-section">
-            <input class="textarea" name="text-to-encrypt"  id="textarea"
-                placeholder="Ingresa el texto a encriptar aquí..."></input>
-            <span>Solo minusculas, sin acentos, sin números</span>
+            <div class="input-container">
+                <input type="text" name="text-to-encrypt" id="input-text"
+                    placeholder="Ingresa el texto a encriptar aquí..."></input>
+                <span>Solo minusculas, sin acentos, sin números</span>
+            </div>
             <div class="buttons">
                 <button id="encrypt-button" class="encrypt-btn">Encriptar</button>
                 <button id="decrypt-button" class="decrypt-btn">Desencriptar</button>
             </div>
         </section>
         <section class="decrypt-section">
-            <p id="text-encrypted">Texto Encriptado/Desencriptado</p>
+            <span id="text-encrypted"></span>
         </section>
     </main>
     <footer>

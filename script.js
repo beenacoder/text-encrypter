@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const text = document.getElementById("textarea");
+    const text = document.getElementById("input-text");
     const encryptButton = document.getElementById("encrypt-button");
     const decryptButton = document.getElementById("decrypt-button");
     const textEncrypted = document.getElementById("text-encrypted");
     const textDecrypted = document.getElementById("text-decrypted");
+
+
 
     encryptButton.addEventListener("click", () => {
         let textToEncrypt = text.value;
@@ -14,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .replace(/o/g, "ober")
             .replace(/u/g, "ufat");
         textEncrypted.innerHTML = encryptedText;
-        console.log(textToEncrypt)
+
+        text.value = "";
     });
 
     decryptButton.addEventListener("click", () => {
@@ -26,7 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
             .replace(/ober/g, "o")
             .replace(/ufat/g, "u");
             textEncrypted.innerHTML = decryptedText;
-        console.log(textToDecrypt)
+            text.value = "";
 })
 
+});
+
+
+document.getElementById("input-text").addEventListener("focus", function(){
+    this.setAttribute("placeholder", "");
+});
+document.getElementById("input-text").addEventListener("blur", function(){
+    this.setAttribute("placeholder", "Ingresa el texto a encriptar aquí...");
 });
