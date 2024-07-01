@@ -57,6 +57,9 @@ main {
     color: #777;
 }
 
+.input-container .alert-msg {
+    color: red;
+}
 
 input  {
     width: 100%;
@@ -157,3 +160,4 @@ footer {
         flex-direction: column;
     }
 }
+

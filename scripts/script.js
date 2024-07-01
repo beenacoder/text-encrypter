@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         this.setAttribute("placeholder", "");
     });
     document.getElementById("input-text").addEventListener("blur", function(){
-        this.setAttribute("placeholder", "Ingresa el texto a encriptar aquí...");
+        this.setAttribute("placeholder", "Ingresa el texto aquí...");
     });
 
 });
