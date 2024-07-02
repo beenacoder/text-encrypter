@@ -100,8 +100,7 @@ input::placeholder {
 }
 
 .buttons button:hover {
-    box-shadow: .5rem .5rem 1rem #ccc,
-            -.5rem -.5rem 1rem #fff;
+    color: #fff;
 }
 
 .buttons button:active {
