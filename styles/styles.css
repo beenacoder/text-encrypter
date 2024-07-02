@@ -61,6 +61,8 @@ main {
     color: red;
 }
 
+
+
 input  {
     width: 100%;
     height: 30px;
@@ -82,7 +84,7 @@ input::placeholder {
     gap: 25px;
 }
 
-button {
+.buttons button {
     background-color: #c3d9df;
     font-weight: semibold;
     color: #444;
@@ -97,12 +99,12 @@ button {
             -.2rem -.2rem 1rem #fff;
 }
 
-button:hover {
+.buttons button:hover {
     box-shadow: .5rem .5rem 1rem #ccc,
             -.5rem -.5rem 1rem #fff;
 }
 
-button:active {
+.buttons button:active {
     box-shadow: inset .5rem .5rem 1rem #fff,
             inset -.2rem -.2rem 1rem #ccc;
 }
@@ -118,6 +120,7 @@ button:active {
 }
 
 .decrypt-section {
+    position: relative;
     flex: 1;
     background-color: #e8e8e8;
     display: flex;
@@ -133,6 +136,31 @@ button:active {
     font-weight: 400;
     padding: 20px;
     font-style: italic;
+}
+
+.decrypt-section .btn-copy {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20px;
+    background-color: transparent;
+    color: #444;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.decrypt-section .btn-copy:hover {
+    color: #537021;
+}
+
+.decrypt-section .alert-msg-copied {
+    align-self: center;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #537021;
 }
 
 footer {
