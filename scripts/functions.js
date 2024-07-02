@@ -3,10 +3,23 @@ const alertMsg = document.getElementById("alert-msg");
 const alertCopiedMsg = document.getElementById("alert-msg-copied");
 const encryptButton = document.getElementById("encrypt-button");
 const decryptButton = document.getElementById("decrypt-button");
+const resetButton = document.getElementById("reset-button");
 const textEncrypted = document.getElementById("text-encrypted");
 const textDecrypted = document.getElementById("text-decrypted");
 const copyButton = document.getElementById("btn-copy");
+const imgLock = document.querySelector(".lock-img");
 
+
+//Number Validation
+function validateText(event) {
+    //Regular expresion to detect numbers, uppercase and accents
+    const regex = /^[A-Z0-9áéíóúÁÉÍÓÚ]+$/;
+    //Verify if the character entered is a number
+    if (regex.test(event.key)) {
+        // Prevent the insertion of the number
+        event.preventDefault();
+    } 
+}
 
 
 //Encrypt Function
@@ -25,7 +38,10 @@ const encrypt = () => {
         textEncrypted.innerHTML = encryptedText;
         text.value = "";
         alertMsg.innerHTML = "";
+        imgLock.style.display = "none";
+        copyButton.style.display = "inline-block";
     }
+
 }
 
 
@@ -45,6 +61,7 @@ const decrypt = () => {
         textEncrypted.innerHTML = decryptedText;
         text.value = "";
         alertMsg.innerHTML = "";
+        imgLock.style.display = "none";
     }
 }
 
@@ -63,3 +80,14 @@ const copyText = async () => {
         console.error('Error al copiar el texto: ', err);
     }
 };
+
+
+//Reset Function
+
+const resetText = () => {
+    window.location.reload();
+
+    //Reset the current page with out reload maintining the state of the page
+    // window.history.go(0);
+}
+

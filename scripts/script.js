@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    text.addEventListener('keypress', validateText);
     encryptButton.addEventListener("click", encrypt);
     decryptButton.addEventListener("click", decrypt);
     copyButton.addEventListener("click", copyText);
+    resetButton.addEventListener("click", resetText);
 
     document.getElementById("input-text").addEventListener("focus", function () {
         this.setAttribute("placeholder", "");
