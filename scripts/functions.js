@@ -10,7 +10,7 @@ const copyButton = document.getElementById("btn-copy");
 const imgLock = document.querySelector(".lock-img");
 
 
-//Number Validation
+//Desktop Validation
 function validateText(event) {
     //Regular expresion to detect numbers, uppercase and accents
     const regex = /^[A-Z0-9áéíóúÁÉÍÓÚ]+$/;
@@ -20,7 +20,14 @@ function validateText(event) {
         event.preventDefault();
     } 
 }
-
+//Validation for mobilephones
+ function validateMobile (e) {
+    const value = e.target.value;
+    const validatedValue = value.replace(/[0-9A-Z]/g, ''); // Elimina todos los números y letras mayúsculas
+    if (value !== validatedValue) {
+        e.target.value = validatedValue; // Actualiza el valor del campo de entrada
+    }
+};
 
 //Encrypt Function
 const encrypt = () => {

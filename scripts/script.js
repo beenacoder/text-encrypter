@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     text.addEventListener('keydown', validateText);
-    text.addEventListener('input', () => {
-        validateText(e)
-    });
+    text.addEventListener('input', validateMobile);
     encryptButton.addEventListener("click", encrypt);
     decryptButton.addEventListener("click", decrypt);
     copyButton.addEventListener("click", copyText);
