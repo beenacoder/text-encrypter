@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     text.addEventListener('keydown', validateText);
-    text.addEventListener('change', () => {
+    text.addEventListener('input', () => {
         validateText(e)
     });
     encryptButton.addEventListener("click", encrypt);
